@@ -13,10 +13,8 @@ void setup() {
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
   
-  //Serial.begin(9600); 
 }
 void loop() {
-  // put your main code here, to run repeatedly:
   
 
  int a=digitalRead(2)+digitalRead(5);
