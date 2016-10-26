@@ -1,13 +1,13 @@
-int pin1 = 2;
-void setup() 
-{
-pinMode(pin1,INPUT);
-
-Serial.begin(9600);
+int pin1 = 2; //Push button
+int buttonState = 0; 
+void setup() {
+  pinMode(pin1,INPUT);
+  Serial.begin(9600);
 
 }
 void loop() {
-if(pin1 == HIGH){
+  buttonState = digitalRead(pin1);
+  if(pin1 == HIGH){
   Serial.write(1);
 }
 else{
