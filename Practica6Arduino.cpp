@@ -7,7 +7,7 @@ Serial.begin(9600);
 
 }
 void loop() {
-if(input1 == HIGH){
+if(pin1 == HIGH){
   Serial.write(1);
 }
 else{
