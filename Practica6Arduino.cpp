@@ -1,7 +1,7 @@
 int pin1 = 2;
 void setup() 
 {
-pinMode(input1,INPUT);
+pinMode(pin1,INPUT);
 
 Serial.begin(9600);
 
