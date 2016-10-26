@@ -3,8 +3,7 @@ import cc.arduino.*;
 Serial myPort;
 int pin1;
 int red = 0;
-int green = 0;
-int blue = 0;
+
 void setup() {
   String portName = Serial.list()[0]; 
 myPort = new Serial(this, portName, 9600); 
