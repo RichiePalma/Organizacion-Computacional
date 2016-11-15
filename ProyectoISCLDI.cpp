@@ -1,4 +1,4 @@
-//ledPin and its variations will be the pins on the Arduino that correspond to a LED
+  //ledPin and its variations will be the pins on the Arduino that correspond to a LED
 int ledPin = 13;  
 int ledPin2 = 12;
 int ledPin3 = 11;
@@ -46,7 +46,7 @@ void loop(){
   }
   
   buttonState = digitalRead(buttonPin);  //Reads if button is either Hight (Being pressed) or LOW (Unpressed)
-    if(buttonState == HIGH){ //Checa si el boton es presionado
+    if(buttonState == HIGH || cont>=1){ //Checa si el boton es presionado
       delay(1000);
       cont+=1;
       timer=fcount/6;
@@ -68,6 +68,44 @@ void loop(){
       }
       if(cont >= (6*timer)){
         digitalWrite(ledPin6, HIGH); // Enciende el LED 
+      }
+      if(cont>(fcount+5)){
+      digitalWrite(ledPin, LOW);
+      digitalWrite(ledPin2, LOW);
+      digitalWrite(ledPin3, LOW);
+      digitalWrite(ledPin4, LOW);
+      digitalWrite(ledPin5, LOW);
+      digitalWrite(ledPin6, LOW);
+      delay (1000);
+      digitalWrite(ledPin, HIGH);
+      digitalWrite(ledPin2, HIGH);
+      digitalWrite(ledPin3, HIGH);
+      digitalWrite(ledPin4, HIGH);
+      digitalWrite(ledPin5, HIGH);
+      digitalWrite(ledPin6, HIGH);
+      delay (10000);
+      digitalWrite(ledPin, LOW);
+      digitalWrite(ledPin2, LOW);
+      digitalWrite(ledPin3, LOW);
+      digitalWrite(ledPin4, LOW);
+      digitalWrite(ledPin5, LOW);
+      digitalWrite(ledPin6, LOW);
+      delay (1000);
+      digitalWrite(ledPin, HIGH);
+      digitalWrite(ledPin2, HIGH);
+      digitalWrite(ledPin3, HIGH);
+      digitalWrite(ledPin4, HIGH);
+      digitalWrite(ledPin5, HIGH);
+      digitalWrite(ledPin6, HIGH);
+      delay (1000);
+      digitalWrite(ledPin, LOW);
+      digitalWrite(ledPin2, LOW);
+      digitalWrite(ledPin3, LOW);
+      digitalWrite(ledPin4, LOW);
+      digitalWrite(ledPin5, LOW);
+      digitalWrite(ledPin6, LOW);
+      cont=0;
+      fcount=0;
       }
     }
     else{
